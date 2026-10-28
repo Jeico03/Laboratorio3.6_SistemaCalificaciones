@@ -17,8 +17,18 @@ El sistema captura el nombre de un estudiante y su calificación numérica (en u
 * **Entorno de desarrollo:** Visual Studio / JetBrains Rider
 * **Restricciones cumplidas:** Uso exclusivo de variables, operadores relacionales/lógicos, estructuras condicionales (`if / else`) y `decimal.TryParse()`. Sin ciclos ni persistencia.
 
+## 🔗 Matriz de Trazabilidad
+| Elemento del Sistema | Descripción / Criterio | Casos de Prueba Asociados |
+|---|---|---|
+| **RF-01** | Captura del nombre del estudiante | CP-01, CP-02, CP-03, CP-04 |
+| **RF-02** | Captura de la calificación como texto | CP-01 al CP-11 |
+| **RF-03** | Validación de formato numérico con `decimal.TryParse` | CP-11 |
+| **RF-04 / RN-01** | Validación de rango permitido (0 a 100) | CP-05, CP-09, CP-10 |
+| **RF-05 / RF-06** | Evaluación de escala y condición (Excelente, Muy bueno, Aprobado, Reprobado) | CP-01 al CP-08 |
+| **RF-07** | Impresión de resumen detallado en consola | CP-01 al CP-08 |
+
 ## 🚦 Casos de Prueba Validados
-| ID | Entrada | Resultado Esperado |
+| ID | Entrada (Nombre / Nota) | Resultado Esperado |
 |---|---|---|
 | CP-01 | Ana / 95 | Excelente / Aprobado |
 | CP-02 | Luis / 85 | Muy bueno / Aprobado |

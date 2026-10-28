@@ -2,8 +2,10 @@
 
 Aplicación de consola desarrollada en **C#** para CodeArt Academy como parte de los fundamentos de programación. Su objetivo principal es automatizar y estandarizar la clasificación del desempeño académico a partir de una nota numérica validada.
 
-## 📋 Descripción del Proyecto
-El sistema captura el nombre de un estudiante y su calificación numérica (en un rango válido de 0 a 100). Utiliza `decimal.TryParse` para asegurar la integridad de los datos de entrada, evalúa las reglas de negocio mediante estructuras condicionales (`if / else if / else`) y muestra un resumen detallado con la clasificación y la condición académica definitiva (Aprobado o Reprobado).
+## 📥 Análisis de Entradas, Proceso y Salidas (IPO)
+| Entradas (Inputs) | Proceso (Process) | Salidas (Outputs) |
+| :--- | :--- | :--- |
+| • Nombre del estudiante (`string`)<br>• Calificación en texto (`string`) | 1. Capturar los datos introducidos por consola.<br>2. Validar que la nota sea un número válido usando `decimal.TryParse`.<br>3. Verificar que esté dentro del rango permitido (0 a 100).<br>4. Evaluar la escala mediante estructuras condicionales (`if / else if / else`). | • Mensajes de error si la entrada no es numérica o está fuera de rango.<br>• Resumen en pantalla que indica el nombre, la nota, la clasificación y la condición (Aprobado/Reprobado). |
 
 ## 🚀 Escala de Desempeño y Reglas de Negocio
 * **Excelente:** 90 ≤ nota ≤ 100 *(Condición: Aprobado)*
